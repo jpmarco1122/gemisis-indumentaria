@@ -1,0 +1,2 @@
+export function initAnalytics(){const id=import.meta.env.VITE_GA_MEASUREMENT_ID;if(!id||window.__GA_READY)return;window.__GA_READY=true;window.dataLayer=window.dataLayer||[];window.gtag=function(){window.dataLayer.push(arguments)};window.gtag('js',new Date());window.gtag('config',id);const s=document.createElement('script');s.async=true;s.src=`https://www.googletagmanager.com/gtag/js?id=${id}`;document.head.appendChild(s)}
+export function track(name,params={}){if(window.gtag)window.gtag('event',name,params)}
